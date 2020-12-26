@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  description: "Not decided yet"
+  description: "a simple digit classifier trained using tensorflow"
   version: "1.0.0"
   title: "Keras Model Server"
   termsOfService: "later"
