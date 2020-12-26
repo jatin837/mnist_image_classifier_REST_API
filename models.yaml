@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  description: "Not decided yet"
+  version: "1.0.0"
+  title: "Keras Model Server"
+  termsOfService: "later"
+  contact:
+    email: "later@somewhare.com"
+paths:
+  /mnist/classify:
+    post:
+      tags:
+      - "mnist classifier"
+      summary: "Classify Digits"
+      description: "Generates a greeting message from a post, such as curl -F file=@sample.png localhost:5000/mnist/classify"
+      operationId: "mnist.post_image"
+      consumes:
+      - "multipart/form-data"
+      - "application/xml"
+      produces:
+      - "text/json"
+      responses:
+        200:
+          description: "classification response"
+          schema:
+            type: "string"
+          examples:
+            text/json: {"text/json":"{digit:0}"}
+      parameters:
+      - name: "file"
+        in: "formData"
+        description: "Image file to classify as a digit"
+        required: true
+        type: 'file'
